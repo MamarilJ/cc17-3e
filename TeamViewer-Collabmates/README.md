@@ -1,1 +1,3 @@
-25/10/2023 - user story
+October 25, 2023
+
+Added user story on projects.
