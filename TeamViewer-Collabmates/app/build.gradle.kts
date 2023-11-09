@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.teamviewer.collabmates"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.teamviewer.collabmates"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

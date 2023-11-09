@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDF4F3"
-    tools:context=".MainActivity">
+    tools:context="com.teamviewer.collabmates.MainActivity">
 
     <View
         android:id="@+id/logo_collab"

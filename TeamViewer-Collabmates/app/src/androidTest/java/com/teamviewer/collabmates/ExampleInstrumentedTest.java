@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.teamviewer.collabmates;
 
 import android.content.Context;
 
