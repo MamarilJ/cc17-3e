@@ -25,7 +25,7 @@
 
 
         <EditText
-            android:id="@+id/editTextName"
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
@@ -48,7 +48,7 @@
 
 
         <EditText
-            android:id="@+id/editTextIdNumber"
+            android:id="@+id/idNumber"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
@@ -72,7 +72,7 @@
         tools:ignore="DuplicateIds">
 
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/email_signup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
@@ -96,7 +96,7 @@
         tools:ignore="DuplicateIds">
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/password_signup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"

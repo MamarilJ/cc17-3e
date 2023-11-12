@@ -1,25 +1,32 @@
 package com.teamviewer.collabmates;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+
+    private BottomNavigationView bottomNavigationView;
+
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button signupButton = findViewById(R.id.signup_button);
-
-        signupButton.setOnClickListener(view -> {
-            // Start SignUpActivity when the "No Account" button is clicked
-            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
-            startActivity(intent);
-        });
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
     }
 }

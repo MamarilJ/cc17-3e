@@ -1,88 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#EDF4F3"
-    tools:context="com.teamviewer.collabmates.MainActivity">
+    android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/logo_collab"
-        android:layout_width="238dp"
-        android:layout_height="36dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="166dp"
-        android:background="@drawable/logo_collab" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white">
 
-    <RelativeLayout
-        android:id="@+id/input1"
-        android:layout_width="345dp"
-        android:layout_height="64dp"
-        android:layout_alignBottom="@+id/logo_collab"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="-110dp"
-        android:background="@drawable/input">
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_collab" />
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="342dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
-            android:autofillHints=""
-            android:background="@null"
-            android:ems="10"
-            android:hint="Enter your email"
-            android:inputType="textEmailAddress" />
-    </RelativeLayout>
+        </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/input2"
-        android:layout_width="345dp"
-        android:layout_height="64dp"
-        android:layout_alignBottom="@+id/logo_collab"
-        android:layout_marginBottom="-200dp"
-        android:layout_marginStart="25dp"
-        android:background="@drawable/input"
-        tools:ignore="DuplicateIds">
+        </androidx.appcompat.widget.Toolbar>
 
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:ems="10"
-            android:layout_marginStart="15dp"
-            android:hint="Enter your password"
-            android:background="@null"
-            android:inputType="textPassword"
-            android:autofillHints="" />
-    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/signin_button"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_alignBottom="@+id/logo_collab"
-        android:layout_marginStart="77dp"
-        android:layout_marginBottom="-283dp"
-        android:background="@drawable/button"
-        android:elevation="20dp"
-        android:gravity="center_vertical|center"
-        android:text="@string/signin"
-        android:textAppearance="@style/button" />
-
-    <Button
-        android:id="@+id/signup_button"
-        android:layout_width="300dp"
-        android:layout_height="41dp"
-        android:layout_alignBottom="@+id/signin_button"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="-60dp"
-        android:background="@drawable/signup_button"
-        android:gravity="center_horizontal|top"
-        android:text="@string/no_account"
-        android:textAppearance="@style/signup_button" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/cardview_light_background"
+        app:itemIconTint="@color/orange"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>
